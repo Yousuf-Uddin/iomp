@@ -1,0 +1,112 @@
+body{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+h1{
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+
+.scroll-text{
+    padding-left: 8px;
+    padding-right: 8px;
+    background: rgba(255, 248, 248, 0.4);
+    border-radius: 8px;
+    width: fit-content;
+    color: rgb(237,27,36);
+    font-size: 1.5rem;
+    white-space: nowrap;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: animate 30s linear infinite;
+    animation-delay: -5s;
+}
+@keyframes animate {
+    0%{
+        transform: translateX(100%);
+    }
+    
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.cardbox{
+    margin-bottom: 4rem;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.cardbox .card{
+    width: 25%;
+    background: rgba(255, 255, 255, 0.521);
+    padding: 30px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, .5);
+    cursor: default;
+}
+.cardbox .card .numbers{
+    font-weight: 700;
+    font-size: 2rem;
+    color: rgb(237,27,36);
+}
+.cardbox .card .cardname{
+    color: black;
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+.cardbox .card .iconbx{
+    padding-left: 1rem;
+    font-size: 3.5rem;
+    color: black;
+}
+.cardbox .card:hover{
+    background: rgb(237,27,36);
+}
+.cardbox .card:hover .numbers,.cardbox .card:hover .iconbx,.cardbox .card:hover .numbers{
+    color: white;
+}
+.btn-stl {
+    padding-bottom: 1rem;
+    width: 25%;
+    font-size: larger;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    background:rgba(255, 255, 255, 0.644) ;
+}
+.btn-stl:hover{
+    color: white;
+    background: rgb(237,27,36);
+}
+.btn-gp{
+    margin: 1rem;
+    padding-top: 1rem;
+}
+ a{
+    font-size: 30px;
+}
+
+
+#login-popup {
+    
+    position: relative;
+    background-color: unset;
+    width: 100%;
+    height: fit-content;
+    line-height: 2rem;
+    border-radius: 5px;
+    padding: 20px 25px 30px 25px
+}
+
+

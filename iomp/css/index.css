@@ -1,0 +1,265 @@
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+.top{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.voters_heading{
+position: relative;
+}
+
+.slideshow-container img{
+  width: 100%;
+  height: 40rem;
+}
+
+
+.btn {
+  border: none;
+ padding: 8px;
+ border-radius: 2rem;
+ background-color: rgba(252, 197, 197, 0.3);
+ color: #f2f2f2;
+ box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
+ font-size: medium;
+}
+
+.btn a{
+  font-size: medium;
+  color: #000;
+}
+
+.btn:hover {
+  color: white;
+  background: rgb(237,27,36);
+  
+}
+.btn a:hover{
+  color: white;
+}
+
+
+
+.main-section{
+  padding:1rem;
+  padding-bottom: .5rem;
+  display: flex;
+  background-color: rgba(122, 121, 121, 0.3);
+  justify-content: space-between;
+  flex-direction:row ;
+  border: none;
+  margin:0;
+}
+.footer-section{
+  padding:1rem;
+  
+  padding-bottom: .5rem;
+  border: none;
+}
+.text-title{
+  position: relative;
+  right: 5rem;
+}
+
+.text-center {
+    font-size:25px;
+    margin-top:-10px;
+    padding-top:20px;
+}
+.text-center a{
+  font-size: larger;
+  font-weight: 700;
+
+}
+a{
+    text-decoration: none;
+  color:rgb(0, 0, 0);
+  font-weight:bold; 
+  font-size:20px;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+.popup-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index:1 ;
+}
+
+.popup-container .popup {
+  background-color: #f0f0f0;
+  width: 25%;
+  height: fit-content;
+  line-height: 2rem;
+  border-radius: 5px;
+  padding: 20px 25px 30px 25px;
+}
+
+.popup-container .popup h2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #30475e;
+}
+
+.popup-container .popup h2 button{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  font-weight: 550;
+  color: #797775;
+}
+.popup-container .popup button.login-btn{
+  background-color: #30475e;
+  color: #f2f2f2;
+  border: none;
+  font-size: medium;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.popup-container .popup input{
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #30475e;
+  border-radius: 0;
+  padding: 5px 0;
+  font-weight: 550;
+  font-size: 14px;
+  outline: none;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+

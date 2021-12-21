@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candidate Registration</title>
+    <link rel="stylesheet" href="../css/csignup.css" />
+    <script
+      src="https://kit.fontawesome.com/5291e76286.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="back">
+        <center>
+          <a href="../index.html"><i class="fas fa-chevron-left"></i> </a>
+          <img
+            src="https://nptel.ac.in/content/college_assets/college_logo/3274_logo.png"
+            alt="an image"
+          />
+        </center>
+      </div>
+      <form
+        class="form-signin"
+        action="../api/csignup.php"
+        enctype="multipart/form-data"
+        method="POST"
+      >
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            placeholder="Candidate name"
+            minlength="3"
+            maxlength="255"
+            required
+            autofocus
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="info"
+            placeholder="Year & Branch"
+            minlength="3"
+            maxlength="255"
+          />
+        </div>
+
+        <div class="form-group">
+          <select name="role" class="form-control">
+            <option value="0">Select Post</option>
+            <option value="1">CR</option>
+            <option value="2">Vice CR</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="file"
+            name="photo"
+            placeholder="upload photo"
+            accept="image/*"
+          />
+        </div>
+        <div class="form-group">
+          <input class="btn" type="submit" value="REGISTER" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Elections</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <section class="main-section">
+      <div class="voters_heading">
+        <img
+          src="./img/logo.png"
+          alt="an image"
+          style="height: 4rem; width: 25rem"
+        />
+      </div>
+
+      <div class="text-center text-title">
+        <a href="index.html">COLLEGE ELECTIONS</a>
+      </div>
+
+      <div class="text-center">
+        <button class="btn" type="button" onclick="popup('login-popup')">
+          <a href="#">ADMIN</a>
+        </button>
+        <button class="btn"><a href="./routes/signin.html">LOGIN</a></button>
+      </div>
+      <!-- popup window -->
+      <div class="popup-container" id="login-popup">
+        <div class="popup">
+          <form method="POST" action="./api/adminlogin.php">
+            <h2>
+              <span>ADMIN LOGIN</span>
+              <button type="reset" onclick="popup('login-popup')">X</button>
+            </h2>
+            <input type="text" placeholder="Username" name="admin_id" />
+            <input type="password" placeholder="Password" name="adminpass" />
+            <button type="submit" class="login-btn" name="Signin">LOGIN</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* image slider */ -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="./img/1.jpg" alt="image one" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./img/2.jpg" alt="image Two" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./img/3.jpg" alt="image Three" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./img/4.jpg" alt="image four" />
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <section class="footer-section">
+      Online Voting System.
+      <br />
+      Final Year IOMP 2021-22. JNTUH
+      <br />
+      &copy2021. Developed by batch-3.
+      <b>
+        <br />
+        Mohammed Amjad(18U61A0519), Mohammed Azmath(18U61A0522) <br />
+        MOHD YOUSUF UDDIN(18U61A0523), MOHD ABUBAKER(18U61A0524).
+      </b>
+      <br />
+      Email: <a href="mailto:gietcse6@gmail.com">gietcse@gmail.com</a>
+    </section>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+    </script>
+
+    <script>
+      function popup(popup_name) {
+        get_popup = document.getElementById(popup_name);
+        if (get_popup.style.display == "flex") {
+          get_popup.style.display = "none";
+        } else {
+          get_popup.style.display = "flex";
+        }
+      }
+    </script>
+  </body>
+</html>
